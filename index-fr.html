@@ -164,9 +164,9 @@
 			defTop.outerHTML = wet.builder.top({
 				"cdnEnv": "esdcprod",
 				"lngLinks": [{
-					"lang": "fr",
-					"href": "index-fr.html",
-					"text": "Français"
+					"lang": "en",
+					"href": "index.html",
+					"text": "English"
 				}],
 				"search": false,
 				"siteMenu": false,
@@ -176,12 +176,12 @@
 		<main property="mainContentOfPage" typeof="WebPageElement" class="container">
 
 <!-- Start page heading -->
-<h1 property="name" id="wb-cont">Non-Competitive Local Licence Application (01000139-001)</h1>
+<h1 property="name" id="wb-cont">Demande de licence non-competitive local (01000139-001)</h1>
 <!-- End page heading -->
 
-<h2>Licence Area</h2>
+<h2>Zone de licence</h2>
 
-<p>Enter your licence area coordinates (maximum 12) by using the draw tool on the interactive map or by entering them manually in a table.</p>
+<p>Saisissez les coordonnées de votre zone de licence (12 au maximum) en utilisant l'outil de dessin sur la carte interactive ou en les saisissant manuellement dans un tableau.</p>
 
 <div class="row wb-frm">
 
@@ -273,7 +273,7 @@
 			const feezone = L.layerGroup();
 
 			const overlays = {
-				'Fee Zones': feezone,
+				'Zone de redevance': feezone,
 			};
 
 			const layerControl = L.control.layers(baseLayers, overlays, {position: 'topleft'});
@@ -356,7 +356,7 @@
                   // Rectangle/Polygon - area
                   var latlngs = layer._defaultShape ? layer._defaultShape() : layer.getLatLngs(),
                   area = L.GeometryUtil.geodesicArea(latlngs);
-                  return "Area: "+ parseFloat(L.GeometryUtil.readableArea(area, true, 5).slice(0, -3))/100 + " square kilometer";
+                  return "Area: "+ parseFloat(L.GeometryUtil.readableArea(area, true, 5).slice(0, -3))/100 + " kilomètres carrées";
         
                 };
         
