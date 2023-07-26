@@ -51,6 +51,7 @@
 				border-color: #FC6;
 				border-width: 2px;
 				border-style: solid;
+				margin-top: 3em;
 			}
 			.notesaboutmockup h2 {
 				font-size: inherit;
@@ -108,50 +109,52 @@
 				}],
 				"search": false,
 				"siteMenu": false,
+				"breadcrumbs": [{
+					"title": "Exit secure transaction",
+					"href": "https://www.canada.ca/en/index.html"
+				}],
 				"showPreContent": false
 			});
 		</script>
 		<main property="mainContentOfPage" typeof="WebPageElement" class="container">
 
 <!-- Start page heading -->
-<h1 property="name" id="wb-cont">NCLL portal login</h1>
+<h1 property="name" id="wb-cont">Sign in</h1>
 <!-- End page heading -->
 
 <div class="row wb-frm">
 
 <!-- Start page content -->
 	<div class="col-md-12">
-		<div class="panel panel-default">
-			<header class="panel-heading">
-				<h2 class="panel-title">Specify exemption</h2>
-			</header>
-			<section class="panel-body">
-				<p>Lorem ipsum&hellip;</p>
-				<hr class="mrgn-tp-md mrgn-bttm-lg">
-				<h3 class="background-accent">Contact information</h3>
-				<p>Provide your name and email address so we can respond to this request.</p>
-				<div class="wb-frm">
-					<div class="form-group">
-						<label for="request.contact.firstName" class="required">
-							<span class="field-name">
-								First name
-							</span>
-							<strong class="required small">(required)</strong>
-						</label>
-						<input id="request.contact.firstName" name="request.contact.firstName" class="form-control " value="" type="text">
-					</div>
-				</div>
-			</section>
-			<footer class="panel-footer">
-				<button class="btn btn-default" type="button">Previous</button>
-				<button class="btn btn-primary" type="button">Next</button>
-				<button class="btn btn-link" type="button">Cancel</button>
-			</footer>
+		<p>Please sign in to your web profile to access the NCLL Portal</p>
+		<div class="wb-frm">
+			<div class="form-group">
+				<label for="username" class="required">
+					<span class="field-name">
+						Username
+					</span>
+					<strong class="required small">(required)</strong>
+				</label>
+				<input id="username" name="username" class="form-control " value="" type="text">
+				<p><a href="https://sms-sgs.ic.gc.ca/login/resetPassword">Forgot your username?</a></p>
+			</div>
+			<div class="form-group">
+				<label for="password" class="required">
+					<span class="field-name">
+						Password
+					</span>
+					<strong class="required small">(required)</strong>
+				</label>
+				<input id="password" name="password" class="form-control " value="" type="password">
+				<p><a href="https://sms-sgs.ic.gc.ca/login/resetPassword">Forgot your password?</a></p>
+			</div>
 		</div>
+		<button class="btn btn-primary" type="button">Sign in</button>
+		<p><a href="https://ised-isde.canada.ca/site/spectrum-management-system/en/online-registration">Register</a> if you are a new user.</p>
 		<div class="notesaboutmockup">
 			<h2>Notes about this mockup:</h2>
 			<ul>
-				<li>This box is for comments about the mockup</li>
+				<li>Ensure the links on this page are correct</li>
 			</ul>
 		</div>
 	</div>
@@ -169,7 +172,7 @@
 				</div>
 				<dl id="wb-dtmd">
 				<dt>Date modified:&#32;</dt>
-				<dd><time property="dateModified">2019-03-01</time></dd>
+				<dd><time property="dateModified">2023-07-31</time></dd>
 				</dl>
 				</div>
 			</div>
@@ -178,7 +181,7 @@
 				var defPreFooter = document.getElementById("def-preFooter");
 				defPreFooter.outerHTML = wet.builder.preFooter({
 					"cdnEnv": "esdcprod",
-					"dateModified": "2019-07-31",
+					"dateModified": "2023-07-31",
 					"showPostContent": false,
 					"showFeedback": false,
 					"showShare": false
