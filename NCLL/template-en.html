@@ -2,7 +2,7 @@
 <!--[if lt IE 9]><html class="no-js lt-ie9" lang="en" dir="ltr"><![endif]-->
 <!--[if gt IE 8]><!--><html class="no-js" lang="en" dir="ltr"><!--<![endif]-->
 	<head>
-<!-- Based on CDTS 4.0.45 (https://cenw-wscoe.github.io/sgdc-cdts/docs/index-en.html) with DECoE customizations added (look for "DECoE customization" in comments) -->
+<!-- Based on CDTS 4.1.0 (https://cenw-wscoe.github.io/sgdc-cdts/docs/index-en.html) with DECoE customizations added (look for "DECoE customization" in comments) -->
 	 <meta charset="utf-8">
 
 <!-- Start DECoE customization -->
@@ -12,23 +12,11 @@
 <!-- End DECoE customization -->
 
 		<meta content="width=device-width,initial-scale=1" name="viewport">
-		<script src="https://ssl-templates.services.gc.ca/app/cls/WET/gcweb/v4_0_45/cdts/compiled/wet-en.js"></script>
+		<script src="https://www.canada.ca/etc/designs/canada/cdts/gcweb/v4_1_0/cdts/compiled/soyutils.js"></script>
+		<script src="https://www.canada.ca/etc/designs/canada/cdts/gcweb/v4_1_0/cdts/compiled/wet-en.js"></script>
 		<noscript>
 			<!-- Write closure fall-back static file -->
 			<!-- refTop.html -->
-			<!--[if gte IE 9 | !IE ]><!-->
-			<link href="https://www.canada.ca/etc/designs/canada/cdts/gcweb/v4_0_45/wet-boew/assets/favicon.ico" rel="icon" type="image/x-icon">
-			<link rel="stylesheet" href="https://www.canada.ca/etc/designs/canada/cdts/gcweb/v4_0_45/wet-boew/css/theme.min.css">
-			<link rel="stylesheet" href="https://www.canada.ca/etc/designs/canada/cdts/gcweb/v4_0_45/cdts/cdtsfixes.css">
-			
-			<!--<![endif]-->
-			<!--[if lt IE 9]>
-			<link href="https://www.canada.ca/etc/designs/canada/cdts/gcweb/v4_0_45/wet-boew/assets/favicon.ico" rel="shortcut icon">
-			<link rel="stylesheet" href="https://www.canada.ca/etc/designs/canada/cdts/gcweb/v4_0_45/wet-boew/css/ie8-theme.min.css">
-			<![endif]-->
-			<link rel="stylesheet" href="https://www.canada.ca/etc/designs/canada/cdts/gcweb/v4_0_45/cdts/cdtsapps.css">
-			<link rel="stylesheet" href="https://www.canada.ca/etc/designs/canada/cdts/gcweb/v4_0_45/css/noscript.min.css">
-			<link rel="stylesheet" href="https://www.canada.ca/etc/designs/canada/cdts/gcweb/v4_0_45/cdts/cdtsnoscript.css">
 		</noscript>
 		<!-- Write closure template -->
 		<script>
@@ -38,7 +26,6 @@
 		</script>
 
 <!-- Start DECoE customization -->
-		<link rel="stylesheet" href="https://www.ic.gc.ca/eic/home.nsf/css/add_WET_4-0_Canada_Apps.css">
 		<style>
 		/* Styles for all mockups */
 			.panel-footer .btn:not(.btn-link) {
@@ -66,36 +53,7 @@
 	<body vocab="http://schema.org/" typeof="WebPage">
 		<div id="def-top">
 			<!-- Write closure fall-back static file -->
-			<!-- appTop-en.html -->
-			<nav aria-label="Skip Links">
-			<ul id="wb-tphp">
-			<li class="wb-slc"><a class="wb-sl" href="#wb-cont">Skip to main content</a></li>
-			<li class="wb-slc visible-xs visible-sm visible-md visible-lg"><a class="wb-sl" href="#wb-info">Skip to "About this Web application"</a></li>
-			</ul>
-			</nav>
-			<header>
-			<div id="wb-bnr" class="container">
-			<div class="row">
-			<div class="brand col-xs-9 col-sm-5 col-md-4" property="publisher" typeof="GovernmentOrganization">
-			<img src="https://www.canada.ca/etc/designs/canada/cdts/gcweb/v4_0_45/wet-boew/assets/sig-blk-en.svg" alt="Government of Canada" property="logo">
-			<span class="wb-inv"> / <span lang="fr">Gouvernement du Canada</span></span>
-			<meta property="name" content="Government of Canada">
-			<meta property="areaServed" typeof="Country" content="Canada">
-			<link property="logo" href="https://www.canada.ca/etc/designs/canada/cdts/gcweb/v4_0_45/wet-boew/assets/wmms-blk.svg">
-			</div>
-			</div>
-			</div>
-			<div class="app-bar">
-			<div class="container">
-			<div class="row">
-			<section class="col-xs-12">
-			<h2 class="wb-inv">Name of Web application</h2>
-			<a class="app-name" href="#[YourApplicationName]">Name of Web application</a>
-			</section>
-			</div>
-			</div>
-			</div>
-			</header>
+			<!-- transactTop-en.html -->
 		</div>
 		<!-- Write closure template -->
 		<script>
@@ -109,19 +67,20 @@
 				}],
 				"search": false,
 				"siteMenu": false,
+				"breadcrumbs": [{
+					"title": "NCLL dashboard",
+					"href": "dashboard.html"
+				}],
 				"showPreContent": false
 			});
 		</script>
 		<main property="mainContentOfPage" typeof="WebPageElement" class="container">
 
-<!-- Start page heading -->
-<h1 property="name" id="wb-cont">Sign in</h1>
-<!-- End page heading -->
-
-<div class="row wb-frm">
-
 <!-- Start page content -->
-	<div class="col-md-12">
+	<h1 property="name" id="wb-cont">Sign in</h1>
+
+	<div class="wb-frmvld">
+		<form action="select-licensee.html" method="get" id="sign-in">
 		<p>Please sign in to your web profile to access the NCLL Portal</p>
 		<div class="wb-frm">
 			<div class="form-group">
@@ -129,45 +88,45 @@
 					<span class="field-name">
 						Username
 					</span>
-					<strong class="required small">(required)</strong>
+					<strong class="required small" aria-hidden="true">(required)</strong>
 				</label>
-				<input id="username" name="username" class="form-control " value="" type="text">
+				<input id="username" name="username" class="form-control " value="" type="text" required="required">
+				<p><a href="https://sms-sgs.ic.gc.ca/login/resetPassword">Forgot your username?</a></p>
+			</div>
+			<div class="form-group">
+				<label for="password" class="required">
+					<span class="field-name">
+						Password
+					</span>
+					<strong class="required small" aria-hidden="true">(required)</strong>
+				</label>
+				<input id="password" name="password" class="form-control " value="" type="password" required="required">
+				<p><a href="https://sms-sgs.ic.gc.ca/login/resetPassword">Forgot your password?</a></p>
 			</div>
 		</div>
-		<button class="btn btn-default" type="button">Previous</button>
-		<button class="btn btn-primary" type="button">Next</button>
-		<button class="btn btn-link" type="button">Cancel</button>
+		<button class="btn btn-primary" type="submit">Sign in</button>
+		<p><a href="https://ised-isde.canada.ca/site/spectrum-management-system/en/online-registration">Register</a> if you are a new user.</p>
 		<div class="notesaboutmockup">
 			<h2>Notes about this mockup:</h2>
 			<ul>
-				<li>This box is for comments about the mockup</li>
+				<li>Ensure the links on this page are correct</li>
 			</ul>
 		</div>
+		</form>
 	</div>
-</div>
+
 <!-- End page content -->
 
 			<div id="def-preFooter">
 				<!-- Write closure fall-back static file -->
 				<!-- preFooter-en.html -->
-				<div class="pagedetails">
-				<div class="row">
-				<div class="col-sm-6 col-md-5 col-lg-4">
-				<a href="https://www.canada.ca/en/report-problem.html" class="btn btn-default btn-center">Report a problem on this page</a>
-				</div>
-				</div>
-				<dl id="wb-dtmd">
-				<dt>Date modified:&#32;</dt>
-				<dd><time property="dateModified">2019-03-01</time></dd>
-				</dl>
-				</div>
 			</div>
 			<!-- Write closure template -->
 			<script>
 				var defPreFooter = document.getElementById("def-preFooter");
 				defPreFooter.outerHTML = wet.builder.preFooter({
 					"cdnEnv": "esdcprod",
-					"dateModified": "2019-07-31",
+					"versionIdentifier": "CD56",
 					"showPostContent": false,
 					"showFeedback": false,
 					"showShare": false
@@ -176,29 +135,7 @@
 		</main>
 		<div id="def-footer">
 			<!-- Write closure fall-back static file -->
-			<!-- appFooter-en.html -->
-			<footer id="wb-info">
-			<div class="brand">
-			<div class="container">
-			<div class="row">
-			<nav class="col-md-10 ftr-urlt-lnk" aria-labelledby="aboutWebApp">
-			<h2 class="wb-inv" id="aboutWebApp">About this Web application</h2>
-			<ul>
-			<li><a href="https://www.canada.ca/en/contact.html">Contact information</a></li>
-			<li><a href="https://www.canada.ca/en/transparency/terms.html">Terms and conditions</a></li>
-			<li><a href="https://www.canada.ca/en/transparency/privacy.html">Privacy</a></li>
-			</ul>
-			</nav>
-			<div class="col-xs-6 visible-sm visible-xs tofpg">
-			<a href="#wb-cont">Top of Page <span class="glyphicon glyphicon-chevron-up"></span></a>
-			</div>
-			<div class="col-xs-6 col-md-3 col-lg-2 text-right">
-			<img src="https://www.canada.ca/etc/designs/canada/cdts/gcweb/v4_0_45/wet-boew/assets/wmms-blk.svg" alt="Symbol of the Government of Canada">
-			</div>
-			</div>
-			</div>
-			</div>
-			</footer>
+			<!-- transactFooter-en.html -->
 		</div>
 		<!-- Write closure template -->
 		<script>
@@ -207,17 +144,20 @@
 				"cdnEnv": "esdcprod",
 				"showFooter": false,
 				"showFeatures": false,
-
-				"contactLinks": [{
-					"href": "#",
-					"newWindow": true
-				}],
 				"termsLink": [{
-					"href": "#"
+        			"newWindow": true
 				}],
 				"privacyLink": [{
 					"newWindow": true
-				}]
+				}],
+				"contextualFooter":{
+					"title": "Spectrum and Telecommunications Sector",
+					"links": [{
+						"text": "Contact us",
+						"href":"https://ised-isde.canada.ca/site/spectrum-management-telecommunications/en/licences-and-certificates/radiocom-information-circulars-ric/ric-66-addresses-and-telephone-numbers-district-offices",
+						"newWindow": true
+					}]
+				}
 			});
 		</script>
 		<!-- Write closure template -->
