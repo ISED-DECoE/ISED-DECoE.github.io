@@ -125,7 +125,8 @@
 <div class="row wb-frm">
 
 <!-- Start page content -->
-	<div class="col-md-12">
+	<div class="col-md-12 wb-frmvld">
+		<form action="sip.html" method="get" id="sign-in">
 		<p>Please sign in to your web profile to access the NCLL Portal</p>
 		<div class="wb-frm">
 			<div class="form-group">
@@ -133,9 +134,9 @@
 					<span class="field-name">
 						Username
 					</span>
-					<strong class="required small">(required)</strong>
+					<strong class="required small" aria-hidden="true">(required)</strong>
 				</label>
-				<input id="username" name="username" class="form-control " value="" type="text">
+				<input id="username" name="username" class="form-control " value="" type="text" required="required">
 				<p><a href="https://sms-sgs.ic.gc.ca/login/resetPassword">Forgot your username?</a></p>
 			</div>
 			<div class="form-group">
@@ -143,9 +144,9 @@
 					<span class="field-name">
 						Password
 					</span>
-					<strong class="required small">(required)</strong>
+					<strong class="required small" aria-hidden="true">(required)</strong>
 				</label>
-				<input id="password" name="password" class="form-control " value="" type="password">
+				<input id="password" name="password" class="form-control " value="" type="password" required="required">
 				<p><a href="https://sms-sgs.ic.gc.ca/login/resetPassword">Forgot your password?</a></p>
 			</div>
 		</div>
@@ -157,6 +158,7 @@
 				<li>Ensure the links on this page are correct</li>
 			</ul>
 		</div>
+		</form>
 	</div>
 </div>
 <!-- End page content -->
